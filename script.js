@@ -6,11 +6,8 @@ function palindrome(str) {
   for(let i = lowerStr.length - 1; i >= 0; i--) {
     reversedStr.push(lowerStr[i]);
   }
-
-  if(lowerStr == reversedStr.join("")) {
-    return true;
-  }
-  return false;
+  
+  return lowerStr == reversedStr.join("");
   
 }
 
