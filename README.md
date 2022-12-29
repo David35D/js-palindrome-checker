@@ -21,4 +21,10 @@ function palindrome(str) {
 }
 
 palindrome("1 eye for of 1 eye.");
+
+//outputs false
+
+palindrome("0_0 (: /-\ :) 0-0");
+
+//outputs true
 ```
