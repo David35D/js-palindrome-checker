@@ -1,11 +1,8 @@
 function palindrome(str) {
   const nonAlphaNum = /\W|_/g;
   const lowerStr = str.replace(nonAlphaNum, "").toLowerCase();
-  const reversedStr = [];
 
-  for(let i = lowerStr.length - 1; i >= 0; i--) {
-    reversedStr.push(lowerStr[i]);
-  }
+  const reversedStr = lowerStr.split("").reverse().join("");
   
   return lowerStr == reversedStr.join("");
   
