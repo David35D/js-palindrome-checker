@@ -7,17 +7,10 @@ Removes all non-alphanumeric characters (punctuation, spaces and symbols) and tu
 function palindrome(str) {
   const nonAlphaNum = /\W|_/g;
   const lowerStr = str.replace(nonAlphaNum, "").toLowerCase();
-  const reversedStr = [];
+  const reversedStr = lowerStr.split("").reverse().join("");
 
-  for(let i = lowerStr.length - 1; i >= 0; i--) {
-    reversedStr.push(lowerStr[i]);
-  }
+  return lowerStr == reversedStr;
 
-  if(lowerStr == reversedStr.join("")) {
-    return true;
-  }
-  return false;
-  
 }
 
 palindrome("1 eye for of 1 eye.");
